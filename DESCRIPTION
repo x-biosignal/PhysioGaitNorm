@@ -1,0 +1,32 @@
+Package: PhysioGaitNorm
+Title: Normative Gait Reference Database for the Physio Ecosystem
+Version: 0.1.1
+Authors@R:
+    person(given = "Yusuke",
+           family = "Matsui",
+           role = c("aut", "cre"),
+           email = "mail.to.matsui@gmail.com")
+Description: Normative gait reference data for the Physio ecosystem: mean and
+    standard-deviation kinematic waveform bands over the gait cycle (51- and
+    101-point) for the nine Gait Deviation Index / Gait Profile Score kinematic
+    variables, together with a normative feature reference set for constructing
+    the Gait Deviation Index. Provides dataset loaders, a catalogue, and a
+    documented provenance and version manifest. The bundled "adult_reference"
+    set is a representative healthy-adult normative model derived from published
+    normal gait kinematics (Perry & Burnfield; Winter; Kadaba et al.) with a
+    synthetic normative feature population; see the provenance manifest and
+    citations. Consumed by gait-index calculations (Schwartz & Rozumalski 2008
+    GDI; Baker et al. 2009 GPS/GVS/MAP).
+Depends:
+    R (>= 4.2)
+Imports:
+    utils
+Suggests:
+    testthat (>= 3.2.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3
+URL: https://github.com/x-biosignal/PhysioGaitNorm, https://x-biosignal.r-universe.dev/PhysioGaitNorm, https://x-biosignal.github.io/PhysioGaitNorm/
+BugReports: https://github.com/x-biosignal/PhysioGaitNorm/issues
