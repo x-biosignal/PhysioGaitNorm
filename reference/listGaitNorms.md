@@ -20,5 +20,5 @@ A data frame, one row per dataset (class `gait_norm_catalog`).
 ``` r
 listGaitNorms()
 #> Normative gait datasets (1):
-#>   - adult_reference v1.0.0: healthy_adult, age 18-45, 100 subjects, 9 variables
+#>   - adult_reference v2.0.0: healthy_adult_young, age 21-37, 24 subjects, 9 variables
 ```

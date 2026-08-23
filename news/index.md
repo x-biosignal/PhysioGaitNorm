@@ -1,5 +1,31 @@
 # Changelog
 
+## PhysioGaitNorm 0.2.0
+
+The bundled `adult_reference` norms are now derived from **real
+motion-capture data**, replacing the previous synthetic model.
+
+- Source: the public **WBDS** dataset (Fukuchi, Fukuchi & Duarte 2018,
+  PeerJ; figshare CC-BY) — the 24 young healthy adults (age 21-37, mean
+  27.6; 14 M/10 F), overground comfortable-speed walking, right limb,
+  time-normalised to the gait cycle. The mean±SD bands (51- and
+  101-point) and the GDI feature population are computed from these real
+  per-subject waveforms (previously synthetic sin/cos curves with a
+  constant SD and an `rnorm`-generated GDI population).
+- Variable mapping is evidence-based: sagittal angles use the Z-axis
+  convention (validated against Perry/Winter — knee-flexion amp 63.6°
+  <peak@73>%, hip 39.7°, ankle 26.2°, pelvic tilt ~10.5° amp 1.9°);
+  frontal/transverse axes resolved by matching published normative shape
+  (pelvic obliquity, hip adduction +7° stance, etc.). foot_progression =
+  FootAngleY (transverse; sign-convention noted).
+- Validated: the sagittal-landmark test (VAL-11) passes against
+  published ranges, and the 24 reference controls give GDI = 100.0 ±
+  10.0. A patient’s GDI/GPS now reflects deviation from **real**
+  normative variability rather than a fabricated constant-SD band.
+- `data-raw/make_gaitnorm.R` rewritten as a real download-and-process
+  script (documents the WBDS DOI, young-cohort selection and the axis
+  mapping).
+
 ## PhysioGaitNorm 0.1.1
 
 ### Validation

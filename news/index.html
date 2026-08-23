@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">PhysioGaitNorm</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +50,15 @@
       <small>Source: <a href="https://github.com/x-biosignal/PhysioGaitNorm/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.2.0" id="physiogaitnorm-020">PhysioGaitNorm 0.2.0<a class="anchor" aria-label="anchor" href="#physiogaitnorm-020"></a></h2>
+<p>The bundled <code>adult_reference</code> norms are now derived from <strong>real motion-capture data</strong>, replacing the previous synthetic model.</p>
+<ul><li>Source: the public <strong>WBDS</strong> dataset (Fukuchi, Fukuchi &amp; Duarte 2018, PeerJ; figshare CC-BY) — the 24 young healthy adults (age 21-37, mean 27.6; 14 M/10 F), overground comfortable-speed walking, right limb, time-normalised to the gait cycle. The mean±SD bands (51- and 101-point) and the GDI feature population are computed from these real per-subject waveforms (previously synthetic sin/cos curves with a constant SD and an <code>rnorm</code>-generated GDI population).</li>
+<li>Variable mapping is evidence-based: sagittal angles use the Z-axis convention (validated against Perry/Winter — knee-flexion amp 63.6° <a href="mailto:peak@73" class="email">peak@73</a>%, hip 39.7°, ankle 26.2°, pelvic tilt ~10.5° amp 1.9°); frontal/transverse axes resolved by matching published normative shape (pelvic obliquity, hip adduction +7° stance, etc.). foot_progression = FootAngleY (transverse; sign-convention noted).</li>
+<li>Validated: the sagittal-landmark test (VAL-11) passes against published ranges, and the 24 reference controls give GDI = 100.0 ± 10.0. A patient’s GDI/GPS now reflects deviation from <strong>real</strong> normative variability rather than a fabricated constant-SD band.</li>
+<li>
+<code>data-raw/make_gaitnorm.R</code> rewritten as a real download-and-process script (documents the WBDS DOI, young-cohort selection and the axis mapping).</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.1" id="physiogaitnorm-011">PhysioGaitNorm 0.1.1<a class="anchor" aria-label="anchor" href="#physiogaitnorm-011"></a></h2>
 <div class="section level3">
