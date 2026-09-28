@@ -13,9 +13,11 @@ reference data inspectable and reproducible.
 
 ``` r
 
+# the containers build on Bioconductor, so its repositories are needed too
+install.packages("BiocManager", repos = "https://cloud.r-project.org")
 options(repos = c(
   xbiosignal = "https://x-biosignal.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
+  BiocManager::repositories()
 ))
 install.packages("PhysioGaitNorm")
 ```
