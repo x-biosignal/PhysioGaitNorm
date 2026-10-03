@@ -6,10 +6,14 @@ standard-deviation kinematic waveform bands over the gait cycle (51- and
 kinematic variables, together with a normative feature reference set for
 constructing the Gait Deviation Index. Provides dataset loaders, a
 catalogue, and a documented provenance and version manifest. The bundled
-"adult_reference" set is a representative healthy-adult normative model
-derived from published normal gait kinematics (Perry & Burnfield;
-Winter; Kadaba et al.) with a synthetic normative feature population;
-see the provenance manifest and citations. Consumed by gait-index
+"adult_reference" set is derived from real motion-capture data - the 24
+young healthy adults (age 21-37) of the public WBDS dataset (Fukuchi,
+Fukuchi & Duarte 2018, CC-BY), overground comfortable-speed walking,
+time-normalised to the gait cycle; the per-subject waveforms also form
+the normative feature population for the Gait Deviation Index. Sagittal
+angles use the Z-axis convention; frontal/transverse axes were resolved
+by matching published normative shape (Perry & Burnfield; Winter). See
+the provenance manifest and citations. Consumed by gait-index
 calculations (Schwartz & Rozumalski 2008 GDI; Baker et al. 2009
 GPS/GVS/MAP).
 
